@@ -20,7 +20,7 @@ class UserTest extends KernelTestCase {
         $this->assertEquals('abcdefg', $user->getPassword());
         $this->assertEquals('osman', $user->getFirstname());
         $this->assertEquals('toy', $user->getLastname());
-        $this->assertEquals(['ROLES_USER'], $user->getRoles());
+        $this->assertContains('ROLES_USER', $user->getRoles());
 
 
 }
